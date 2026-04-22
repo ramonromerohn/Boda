@@ -202,6 +202,7 @@
                             <div class="form-row">
                                 <h4 class="mb-3">Numero de invitados: <span id="cantidad-invitados"></h4>
                                 <br><br><br>
+                            </div>
 
 
         <script>
@@ -226,8 +227,7 @@
                 // 4. Imprimir en el HTML
                 if (persona) {
                   document.getElementById('nombre-persona').innerText = persona.Nombre;
-                  // Ojo: la clave en tu JSON tiene un espacio: "Invitados "
-                  document.getElementById('cantidad-invitados').innerText = persona["Invitados"];
+                  document.getElementById('cantidad-invitados').innerText = persona.Invitados;
                 } else {
                   document.getElementById('nombre-persona').innerText = "Persona no encontrada";
                 }
