@@ -1,14 +1,26 @@
 [
   {
     "Id": "0db2dd89-d5f5-4913-b2e6-fb99a154682d",
-    "Nombre": "Vilma Navarro",
-    "Familia": "Navarro Vallecillo",
+    "Nombre": "Vilma",
+    "Apellido": "Navarro",
     "Invitados": "1"
   },
   {
     "Id": "3aeec543-84b3-4a42-b2ea-efdc25270a45",
-    "Nombre": "Karen Navarro",
-    "Familia": "Gamboa Reynaud",
-    "Invitados ": "2",
+    "Nombre": "Karen",
+    "Apellido": "Reynaud",
+    "Invitados": "2"
+  },
+  {
+    "Id": "83d32583-c9eb-4db7-bab2-44a304f75ace",
+    "Nombre": "Marielos",
+    "Apellido": "Romero",
+    "Invitados": "3"
+  },
+  {
+    "Id": "41892098-9f18-4e9a-bf83-67608b67d195",
+    "Nombre": "Francisco",
+    "Apellido": "Martinez",
+    "Invitados": "3"
   }
 ]

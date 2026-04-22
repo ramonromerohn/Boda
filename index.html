@@ -43,7 +43,6 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Inicio</a>
-                <a href="#about" class="nav-item nav-link">About</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">Ramón <span class="text-primary">Y</span> Claudia</h1>
@@ -189,7 +188,7 @@
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Confirmar invitación</h6>
-                <h1 class="font-secondary display-4">Ven a nuestra fiesta!</h1>
+                <h1 class="font-secondary display-4">¡Ven a nuestra fiesta!</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
@@ -197,12 +196,12 @@
                     <div class="text-center">
                         <form>
                             <div class="form-row">
-                                <h4 class="mb-3">Para: <span id="nombre-persona"> Cargando...</h4>
+                                <h4 class="mb-3">Para: <span id="nombre-persona">  <span id="apellido-persona">Cargando...</h4>
                             </div>
                             <div class="form-row">
                                 <h4 class="mb-3">Numero de invitados: <span id="cantidad-invitados"></h4>
-                                <br><br><br>
                             </div>
+                            <br><br><br>
 
 
         <script>
@@ -227,6 +226,7 @@
                 // 4. Imprimir en el HTML
                 if (persona) {
                   document.getElementById('nombre-persona').innerText = persona.Nombre;
+                  document.getElementById('apellido-persona').innerText = persona.Apellido;
                   document.getElementById('cantidad-invitados').innerText = persona.Invitados;
                 } else {
                   document.getElementById('nombre-persona').innerText = "Persona no encontrada";
