@@ -196,7 +196,7 @@
                     <div class="text-center">
                         <form>
                             <div class="form-row">
-                                <h4 class="mb-3">Para: <span id="nombre-persona"> <span id="apellido-persona">Cargando...</h4>
+                                <h4 class="mb-3">Para: <span id="nombre-persona"> <span id="apellido-persona"></h4>
                             </div>
                             <div class="form-row">
                                 <h4 class="mb-3">Numero de invitados: <span id="cantidad-invitados"></h4>
@@ -212,7 +212,7 @@
             const idUrl = params.get('id');
 
             if (!idUrl) {
-              document.getElementById('nombre-persona').innerText = "ID no proporcionado en la URL";
+              document.getElementById('nombrecompleto-persona').innerText = "ID no proporcionado en la URL";
                   return;
                 }
 
@@ -227,6 +227,7 @@
                 if (persona) {
                   document.getElementById('nombre-persona').innerText = persona.Nombre;
                   document.getElementById('apellido-persona').innerText = persona.Apellido;
+                  document.getElementById('nombrecompleto-persona').innerText = persona.Nombre + " " + persona.Apellido;
                   document.getElementById('cantidad-invitados').innerText = persona.Invitados;
                 } else {
                   document.getElementById('nombre-persona').innerText = "Persona no encontrada";
