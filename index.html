@@ -8,6 +8,11 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
+    <meta property="og:title" content="Boda Ramón y Claudia" />
+    <meta property="og:description" content="Invitación de Boda Ramón y Claudia." />
+    <meta property="og:image" content="https://ramonromerohn.github.io/Boda/img/carousel-1.jpg" />
+    <meta property="og:url" content="https://ramonromerohn.github.io/Boda/" />
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -90,18 +95,18 @@
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <a href="https://maps.app.goo.gl/8jerQFfPMN4dTefq5"><img class="img-fluid mb-4" src="img/event-1.jpg" alt=""></a>
+                        <a href="https://maps.app.goo.gl/RwKNRFBmCAd6MAT39"><img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Ceremonia</h4>
                         <p class="mb-2">Iglesia Nuestra Señora de Suyapa, Col. San Carlos de Sula, 12 y 14 calle, 21 ave, San Pedro Sula, Cortes, Honduras</p>
-                        <p class="mb-0">5:00PM - 6:00PM</p>
+                        <p class="mb-0">5:00PM - 6:00PM</p></a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <a href="https://maps.app.goo.gl/PxUjC3cKNykDodp66"><img class="img-fluid mb-4" src="img/event-2.jpg" alt=""></a>
+                        <a href="https://maps.app.goo.gl/PxUjC3cKNykDodp66"><img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
                         <h4 class="mb-3">Recepción</h4>
                         <p class="mb-2">Hotel Monteolivos, 10 Calle 15 Ave Barrio Suyapa, 15 Avenida SO, San Pedro Sula, Cortes, Honduras</p>
-                        <p class="mb-0">7:00PM - 11:00PM</p>
+                        <p class="mb-0">7:00PM - 11:00PM</p></a>
                     </div>
                 </div>
             </div>
@@ -192,14 +197,49 @@
                     <div class="text-center">
                         <form>
                             <div class="form-row">
-                                <h4 class="mb-3">Familia: Template</h4>
+                                <h4 class="mb-3">Para: <span id="nombre-persona"> Cargando...</h4>
                             </div>
                             <div class="form-row">
-                                <h4 class="mb-3">Numero de invitados: 1</h4>
+                                <h4 class="mb-3">Numero de invitados: <span id="cantidad-invitados"></h4>
                                 <br><br><br>
-                            </div>
+
+
+        <script>
+        async function mostrarInformacion() {
+          try {
+            // 1. Obtener el ID de la URL (?id=xxxx)
+            const params = new URLSearchParams(window.location.search);
+            const idUrl = params.get('id');
+
+            if (!idUrl) {
+              document.getElementById('nombre-persona').innerText = "ID no proporcionado en la URL";
+                  return;
+                }
+
+                // 2. Leer el archivo JSON
+                const respuesta = await fetch('invitados.json');
+                const datos = await respuesta.json();
+
+                // 3. Buscar la persona por ID
+                const persona = datos.find(p => p.Id === idUrl);
+
+                // 4. Imprimir en el HTML
+                if (persona) {
+                  document.getElementById('nombre-persona').innerText = persona.Nombre;
+                  // Ojo: la clave en tu JSON tiene un espacio: "Invitados "
+                  document.getElementById('cantidad-invitados').innerText = persona["Invitados"];
+                } else {
+                  document.getElementById('nombre-persona').innerText = "Persona no encontrada";
+                }
+                
+              } catch (error) {
+                console.error("Error al cargar los datos:", error);
+              }
+            }
+     mostrarInformacion();
+    </script>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Aceptar invitación</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5" onclick="window.open('https://api.whatsapp.com/send?phone=50432670467&text=Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda.', '_blank')" >Aceptar invitación</button>
                             </div>
                         </form>
                     </div>
@@ -239,6 +279,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
