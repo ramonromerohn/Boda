@@ -29,6 +29,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -43,7 +44,6 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Inicio</a>
-                <a href="#about" class="nav-item nav-link">About</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">Ramón <span class="text-primary">Y</span> Claudia</h1>
@@ -95,18 +95,20 @@
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <a href="https://maps.app.goo.gl/RwKNRFBmCAd6MAT39"><img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
+                        <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
                         <h4 class="mb-3">Ceremonia</h4>
                         <p class="mb-2">Iglesia Nuestra Señora de Suyapa, Col. San Carlos de Sula, 12 y 14 calle, 21 ave, San Pedro Sula, Cortes, Honduras</p>
-                        <p class="mb-0">5:00PM - 6:00PM</p></a>
+                        <p class="mb-0">5:00PM - 6:00PM</p>
+                        <a href="https://maps.app.goo.gl/RwKNRFBmCAd6MAT39"><p class="mb-0">Ver ubicación en Google Maps <img src="img/Google_Maps.png" alt="gmaps" width="20" height="20"></p></a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <a href="https://maps.app.goo.gl/PxUjC3cKNykDodp66"><img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
+                        <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
                         <h4 class="mb-3">Recepción</h4>
                         <p class="mb-2">Hotel Monteolivos, 10 Calle 15 Ave Barrio Suyapa, 15 Avenida SO, San Pedro Sula, Cortes, Honduras</p>
-                        <p class="mb-0">7:00PM - 11:00PM</p></a>
+                        <p class="mb-0">7:00PM - 11:00PM</p>
+                        <a href="https://maps.app.goo.gl/PxUjC3cKNykDodp66"><p class="mb-0">Ver ubicación en Google Maps <img src="img/Google_Maps.png" alt="gmaps" width="20" height="20"></p></a>
                     </div>
                 </div>
             </div>
@@ -165,7 +167,7 @@
                         <img class="img-fluid w-100" src="img/groomsmen-3.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
                             <h4 class="text-uppercase">Agradeceremos sus regalos en efectivo</h4>
-                            <p class="mb-3">Si desea.</p>
+                            <p class="mb-3">Tambien aceptamos transferencias.</p>
                         </div>
                     </div>
                 </div>
@@ -189,7 +191,7 @@
         <div class="container py-5">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Confirmar invitación</h6>
-                <h1 class="font-secondary display-4">Ven a nuestra fiesta!</h1>
+                <h1 class="font-secondary display-4">¡Ven a nuestra fiesta!</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
@@ -197,13 +199,12 @@
                     <div class="text-center">
                         <form>
                             <div class="form-row">
-                                <h4 class="mb-3">Para: <span id="nombre-persona"> Cargando...</h4>
+                                <h4 class="mb-3">Para: <span id="nombrecompleto-persona"> Cargando...</h4>
                             </div>
                             <div class="form-row">
-                                <h4 class="mb-3">Numero de invitados: <span id="cantidad-invitados"></h4>
+                                <h4 class="mb-3">Total de invitados: <span id="cantidad-invitados"></h4>
                                 <br><br><br>
                             </div>
-
 
         <script>
         async function mostrarInformacion() {
@@ -213,7 +214,7 @@
             const idUrl = params.get('id');
 
             if (!idUrl) {
-              document.getElementById('nombre-persona').innerText = "ID no proporcionado en la URL";
+              document.getElementById('nombrecompleto-persona').innerText = "Tarjeta no valida.";
                   return;
                 }
 
@@ -226,21 +227,31 @@
 
                 // 4. Imprimir en el HTML
                 if (persona) {
-                  document.getElementById('nombre-persona').innerText = persona.Nombre;
-                  document.getElementById('cantidad-invitados').innerText = persona.Invitados;
+                    document.getElementById('nombrecompleto-persona').innerText = persona.Nombre + " " + persona.Apellido;
+                    document.getElementById('cantidad-invitados').innerText = persona.Invitados;
+                    const nombre = persona.Nombre + " " + persona.Apellido || "Invitado"; 
+                    const numero = "50432670467";
+                    const mensaje = encodeURIComponent(`Hola, soy ${nombre} y quiero confirmar mi asistencia a la boda.`);
+                    const urlWa = `https://wa.me/${numero}?text=${mensaje}`;
+
+    // 3. Dibuja el botón en la pantalla
+    document.getElementById('area-boton').innerHTML = `
+        <a href="${urlWa}" target="_blank" style="background:#f89250; color:white; padding:15px; text-decoration:none; border-radius:8px; font-family:sans-serif; display:inline-block; ">
+            Confirmar como ${nombre} <img src="img/whatsapp-brands-solid.png" alt="whatsapp" width="25" height="25">
+        </a>`;
                 } else {
-                  document.getElementById('nombre-persona').innerText = "Persona no encontrada";
+                  document.getElementById('nombrecompleto-persona').innerText = "Persona no encontrada";
                 }
                 
               } catch (error) {
                 console.error("Error al cargar los datos:", error);
               }
             }
-     mostrarInformacion();
-    </script>
-                            <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" onclick="window.open('https://api.whatsapp.com/send?phone=50432670467&text=Quiero%20confirmar%20mi%20asistencia%20a%20la%20boda.', '_blank')" >Aceptar invitación</button>
-                            </div>
+        mostrarInformacion();
+        </script>
+        <div id="area-boton" ></div>
+
+
                         </form>
                     </div>
                 </div>
@@ -283,6 +294,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
