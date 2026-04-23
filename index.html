@@ -219,7 +219,7 @@
                 }
 
                 // 2. Leer el archivo JSON
-                const respuesta = await fetch('https://raw.githubusercontent.com/ramonromerohn/Boda/refs/heads/main/invitados.json');
+                const respuesta = await fetch('invitados.json');
                 const datos = await respuesta.json();
 
                 // 3. Buscar la persona por ID
