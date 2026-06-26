@@ -51,15 +51,15 @@
   "Id": "bf05ab0b-e0a1-490c-8637-79a5666dd187",
   "Nombre": "Xiomara",
   "Apellido": "Navarro",
-  "Invitados": 3,
+  "Invitados": 4,
   "Recuerdo": 1,
   "Confirmado": 0
  },
  {
   "Id": "9f81abeb-3c85-4549-9ed1-5c0a625bfe23",
-  "Nombre": "Tania",
-  "Apellido": "Letona",
-  "Invitados": 3,
+  "Nombre": "Jose",
+  "Apellido": "Rivera",
+  "Invitados": 2,
   "Recuerdo": 0,
   "Confirmado": 0
  },
@@ -347,7 +347,7 @@
   "Id": "a75e9a3c-61a6-40a1-b1a3-357100924d55",
   "Nombre": "Kevin",
   "Apellido": "Paz",
-  "Invitados": 2,
+  "Invitados": 1,
   "Recuerdo": 0,
   "Confirmado": 0
  }
