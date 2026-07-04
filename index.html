@@ -205,6 +205,9 @@
                             <div class="form-row">
                                 <h4 class="mb-3">Total de invitados: <span id="cantidad-invitados"></h4>
                                 <br><br><br>
+                             <div class="form-row">
+                                <p id="mensaje-confirmacion"></p>
+                                <br><br><br>
                             </div>
 
         <script>
@@ -215,7 +218,7 @@
             const idUrl = params.get('id');
 
             if (!idUrl) {
-              document.getElementById('nombrecompleto-persona').innerText = "Tarjeta no valida.";
+              document.getElementById('nombrecompleto-persona').innerText = "Tarjeta invalida.";
                   return;
                 }
 
@@ -225,6 +228,13 @@
 
                 // 3. Buscar la persona por ID
                 const persona = datos.find(p => p.Id === idUrl);
+
+              if (persona.Confirmado) {
+                  document.getElementById('nombrecompleto-persona').innerText = persona.Nombre + " " + persona.Apellido;
+                  document.getElementById('cantidad-invitados').innerText = persona.Invitados;
+                  document.getElementById('mensaje-confirmacion').innerText = "Gracias por confirmar! Te esperamos!";
+                  return;
+                }
 
                 // 4. Imprimir en el HTML
                 if (persona) {
