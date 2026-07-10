@@ -13,7 +13,7 @@
   "Apellido": "Reynaud",
   "Invitados": 2,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "6ec9601f-7e1c-4717-9d38-70569cb963a9",
@@ -205,7 +205,7 @@
   "Apellido": "Murillo",
   "Invitados": 3,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "40bd50fc-5757-4da7-8a20-05e397ee4d6d",
@@ -245,7 +245,7 @@
   "Apellido": "Molina",
   "Invitados": 2,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "c19daa44-e6fa-4b7b-9d85-12876a7da3bd",
