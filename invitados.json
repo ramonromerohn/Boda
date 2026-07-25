@@ -213,7 +213,7 @@
   "Apellido": "Murillo",
   "Invitados": 2,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "0dac9934-49a1-4025-b12e-1e3d14790899",
@@ -221,7 +221,7 @@
   "Apellido": "Murillo",
   "Invitados": 2,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "5b0a0ec8-4c29-4d09-9550-50f27aa27394",
@@ -269,7 +269,7 @@
   "Apellido": "Paz",
   "Invitados": 1,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "f38b359d-4ec2-427a-bb99-369c9d4fe798",
@@ -309,7 +309,7 @@
   "Apellido": "Lopez",
   "Invitados": 1,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "fac53dc3-ca24-4ded-b0c6-ef5f13b0f68b",
