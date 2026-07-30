@@ -5,7 +5,7 @@
   "Apellido": "Navarro",
   "Invitados": 1,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "1f13eb37-8970-4bd1-9897-1267d5fe2a63",
@@ -29,7 +29,7 @@
   "Apellido": "Navarro",
   "Invitados": 3,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "c0760f05-4be5-4248-953d-68d2354c6da5",
@@ -69,7 +69,7 @@
   "Apellido": "Navarro",
   "Invitados": 4,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "60329931-e7ea-4b99-917e-689d644e92bf",
@@ -131,9 +131,9 @@
   "Id": "760959b0-9fa1-4d59-99e9-1a05a2cd53b2",
   "Nombre": "Vilma",
   "Apellido": "Contreras",
-  "Invitados": 1,
+  "Invitados": 2,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "7a3fa6e4-bcbb-4830-b4c5-eff53e55cdab",
@@ -141,7 +141,7 @@
   "Apellido": "Tatum",
   "Invitados": 1,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "25651cbd-53d9-4c0e-9617-c1a0f4feaf3a",
@@ -165,7 +165,7 @@
   "Apellido": "Lambur",
   "Invitados": 1,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "8d64ecd1-f50f-47c4-8dc4-fc5eaff4cd0e",
@@ -173,7 +173,7 @@
   "Apellido": "Vallecillo",
   "Invitados": 1,
   "Recuerdo": 1,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "fc7964ac-6c66-43c1-aab5-aa0d170e90ca",
@@ -301,7 +301,7 @@
   "Apellido": "Gonzalez",
   "Invitados": 1,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "f68c3201-c696-407e-8dcc-1b0f884f8779",
@@ -348,6 +348,14 @@
   "Nombre": "Kevin",
   "Apellido": "Paz",
   "Invitados": 1,
+  "Recuerdo": 0,
+  "Confirmado": 0
+ },
+ {
+  "Id": "6b3a9d6f-3c73-4547-b941-1d5ff23d8ac7",
+  "Nombre": "Reina Mercedes",
+  "Apellido": "Espinoza",
+  "Invitados": 2,
   "Recuerdo": 0,
   "Confirmado": 0
  }
