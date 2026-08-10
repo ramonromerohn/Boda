@@ -117,7 +117,7 @@
   "Apellido": "Campos Jr.",
   "Invitados": 2,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "ba4d9a07-5c0b-4ba6-8741-3bb36361235f",
@@ -285,7 +285,7 @@
   "Apellido": "Cortes",
   "Invitados": 1,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  },
  {
   "Id": "7f8420b0-7236-47cd-86c1-a7ae504cc7e5",
@@ -357,6 +357,6 @@
   "Apellido": "Espinoza",
   "Invitados": 2,
   "Recuerdo": 0,
-  "Confirmado": 0
+  "Confirmado": 1
  }
 ]
